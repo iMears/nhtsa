@@ -1,0 +1,23 @@
+{
+  "name": "nhtsa",
+  "version": "1.0.0",
+  "description": "Fetch and parse vehicle data from the NHTSA API",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "keywords": [
+    "nhtsa",
+    "national",
+    "highway",
+    "and",
+    "transportatino",
+    "safety",
+    "administration",
+    "api",
+    "vin",
+    "vehicle"
+  ],
+  "author": "Maxwell Mears",
+  "license": "MIT"
+}
