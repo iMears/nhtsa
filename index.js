@@ -15,7 +15,6 @@ class NHTSAVehicle {
       if(!validateVIN(vin)) reject(new Error('Invalid VIN'));
 
       const url = `${this.URL_BASE}/DecodeVin/${vin}?format=${format}`;
-      console.log(`making call to ${url}`);
 
       axios.get(url).then(
         response => resolve(response),

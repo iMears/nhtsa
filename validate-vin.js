@@ -1,5 +1,5 @@
-function validateVIN(rawVin) {
-  const vin = rawVin.toLowerCase();
+function validateVIN(vin) {
+  vin = vin.toLowerCase();
 
   if (!/^[a-hj-npr-z0-9]{8}[0-9xX][a-hj-npr-z0-9]{8}$/.test(vin)) {
     return false;
