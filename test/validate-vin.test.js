@@ -68,8 +68,8 @@ describe('#validVIN()', () => {
     });
   });
 
+  context('given a 17 digit VIN with a Q', () => {
     it('fails validation', () => {
-      context('given a 17 digit VIN with a Q', () => {
         vin = 'WVWUK63B92P54681Q';
         result = validateVIN(vin);
 

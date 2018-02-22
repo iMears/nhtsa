@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Count>116</Count>
+  <Message>Results returned successfully</Message>
+  <SearchCriteria>VIN:WUAAU34248N006164</SearchCriteria>
+  <Results>
+    <DecodedVariable>
+      <VariableId>142</VariableId>
+      <Variable>Suggested VIN</Variable>
+      <ValueId />
+      <Value />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>143</VariableId>
+      <Variable>Error Code</Variable>
+      <ValueId>0</ValueId>
+      <Value>0 - VIN decoded clean. Check Digit (9th position) is correct</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>144</VariableId>
+      <Variable>Possible Values</Variable>
+      <ValueId />
+      <Value />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>156</VariableId>
+      <Variable>Additional Error Text</Variable>
+      <ValueId />
+      <Value />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>10</VariableId>
+      <Variable>Destination Market</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>26</VariableId>
+      <Variable>Make</Variable>
+      <ValueId>582</ValueId>
+      <Value>AUDI</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>27</VariableId>
+      <Variable>Manufacturer Name</Variable>
+      <ValueId>1150</ValueId>
+      <Value>QUATTRO GMBH</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>28</VariableId>
+      <Variable>Model</Variable>
+      <ValueId>3789</ValueId>
+      <Value>R8</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>29</VariableId>
+      <Variable>Model Year</Variable>
+      <ValueId />
+      <Value>2008</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>31</VariableId>
+      <Variable>Plant City</Variable>
+      <ValueId />
+      <Value>Neckarsulm</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>34</VariableId>
+      <Variable>Series</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>38</VariableId>
+      <Variable>Trim</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>39</VariableId>
+      <Variable>Vehicle Type</Variable>
+      <ValueId>2</ValueId>
+      <Value>PASSENGER CAR</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>75</VariableId>
+      <Variable>Plant Country</Variable>
+      <ValueId>2</ValueId>
+      <Value>Germany</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>76</VariableId>
+      <Variable>Plant Company Name</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>77</VariableId>
+      <Variable>Plant State</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>109</VariableId>
+      <Variable>Trim2</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>110</VariableId>
+      <Variable>Series2</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>114</VariableId>
+      <Variable>Note</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>136</VariableId>
+      <Variable>Base Price ($)</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>157</VariableId>
+      <Variable>Manufacturer Id</Variable>
+      <ValueId />
+      <Value>1150</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>158</VariableId>
+      <Variable>Cash For Clunkers</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>5</VariableId>
+      <Variable>Body Class</Variable>
+      <ValueId>1</ValueId>
+      <Value>Cabriolet/Convertible</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>14</VariableId>
+      <Variable>Doors</Variable>
+      <ValueId />
+      <Value>2</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>40</VariableId>
+      <Variable>Windows</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>60</VariableId>
+      <Variable>Wheel Base Type</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>159</VariableId>
+      <Variable>Track Width</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>25</VariableId>
+      <Variable>Gross Vehicle Weight Rating</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>49</VariableId>
+      <Variable>Bed Length (inches)</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>54</VariableId>
+      <Variable>Curb Weight (pounds)</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>111</VariableId>
+      <Variable>Wheel Base (inches)</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>112</VariableId>
+      <Variable>Wheel Base (inches) up to</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>3</VariableId>
+      <Variable>Bed Type</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>4</VariableId>
+      <Variable>Cab Type</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>116</VariableId>
+      <Variable>Trailer Type Connection</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>117</VariableId>
+      <Variable>Trailer Body Type</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>118</VariableId>
+      <Variable>Trailer Length (feet)</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>155</VariableId>
+      <Variable>Other Trailer Info</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>115</VariableId>
+      <Variable>Number of Wheels</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>119</VariableId>
+      <Variable>Wheel Size Front (inches)</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>120</VariableId>
+      <Variable>Wheel Size Rear (inches)</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>23</VariableId>
+      <Variable>Entertainment System</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>36</VariableId>
+      <Variable>Steering Location</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>33</VariableId>
+      <Variable>Number of Seats</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>61</VariableId>
+      <Variable>Number of Seat Rows</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>37</VariableId>
+      <Variable>Transmission Style</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>63</VariableId>
+      <Variable>Transmission Speeds</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>15</VariableId>
+      <Variable>Drive Type</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>41</VariableId>
+      <Variable>Axles</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>145</VariableId>
+      <Variable>Axle Configuration</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>42</VariableId>
+      <Variable>Brake System Type</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>52</VariableId>
+      <Variable>Brake System Description</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>1</VariableId>
+      <Variable>Battery Info</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>2</VariableId>
+      <Variable>Battery Type</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>48</VariableId>
+      <Variable>Number of Battery Cells per Module</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>57</VariableId>
+      <Variable>Battery Current (Amps)</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>58</VariableId>
+      <Variable>Battery Voltage (Volts)</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>59</VariableId>
+      <Variable>Battery Energy (KWh)</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>72</VariableId>
+      <Variable>EV Drive Unit</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>132</VariableId>
+      <Variable>Battery Current (Amps) up to</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>133</VariableId>
+      <Variable>Battery Voltage (Volts) up to</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>134</VariableId>
+      <Variable>Battery Energy (KWh) up to</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>137</VariableId>
+      <Variable>Number of Battery Modules per Pack</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>138</VariableId>
+      <Variable>Number of Battery Packs per Vehicle</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>127</VariableId>
+      <Variable>Charger Level</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>128</VariableId>
+      <Variable>Charger Power (KW)</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>9</VariableId>
+      <Variable>Engine Number of Cylinders</Variable>
+      <ValueId />
+      <Value>8</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>11</VariableId>
+      <Variable>Displacement (CC)</Variable>
+      <ValueId />
+      <Value>4163</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>12</VariableId>
+      <Variable>Displacement (CI)</Variable>
+      <ValueId />
+      <Value>254.041846666</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>13</VariableId>
+      <Variable>Displacement (L)</Variable>
+      <ValueId />
+      <Value>4.163000</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>17</VariableId>
+      <Variable>Engine Stroke Cycles</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>18</VariableId>
+      <Variable>Engine Model</Variable>
+      <ValueId />
+      <Value>Audi</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>21</VariableId>
+      <Variable>Engine Power (KW)</Variable>
+      <ValueId />
+      <Value>313.194000</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>24</VariableId>
+      <Variable>Fuel Type - Primary</Variable>
+      <ValueId>4</ValueId>
+      <Value>Gasoline</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>62</VariableId>
+      <Variable>Valve Train Design</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>64</VariableId>
+      <Variable>Engine Configuration</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>66</VariableId>
+      <Variable>Fuel Type - Secondary</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>67</VariableId>
+      <Variable>Fuel Delivery / Fuel Injection Type</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>71</VariableId>
+      <Variable>Engine Brake (hp)</Variable>
+      <ValueId />
+      <Value>420.00</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>122</VariableId>
+      <Variable>Cooling Type</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>125</VariableId>
+      <Variable>Engine Brake (hp) up to</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>126</VariableId>
+      <Variable>Electrification Level</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>129</VariableId>
+      <Variable>Other Engine Info</Variable>
+      <ValueId />
+      <Value>50-St/Can. BIN 5 / LEV II emission std. Emissions Certification Test Group: 8ADXV04.2375.  </Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>135</VariableId>
+      <Variable>Turbo</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>139</VariableId>
+      <Variable>Top Speed (MPH)</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>146</VariableId>
+      <Variable>Engine Manufacturer</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>78</VariableId>
+      <Variable>Pretensioner</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>79</VariableId>
+      <Variable>Seat Belts Type</Variable>
+      <ValueId>1</ValueId>
+      <Value>Manual</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>121</VariableId>
+      <Variable>Other Restraint System Info</Variable>
+      <ValueId />
+      <Value>Active Seat Belt, Advanced Front AirBag</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>55</VariableId>
+      <Variable>Curtain Air Bag Locations</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>56</VariableId>
+      <Variable>Seat Cushion Air Bag Locations</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>65</VariableId>
+      <Variable>Front Air Bag Locations</Variable>
+      <ValueId>3</ValueId>
+      <Value>1st Row (Driver &amp; Passenger)</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>69</VariableId>
+      <Variable>Knee Air Bag Locations</Variable>
+      <ValueId>3</ValueId>
+      <Value>1st Row (Driver &amp; Passenger)</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>107</VariableId>
+      <Variable>Side Air Bag Locations</Variable>
+      <ValueId>3</ValueId>
+      <Value>1st Row (Driver &amp; Passenger)</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>16</VariableId>
+      <Variable>Driver Assist</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>81</VariableId>
+      <Variable>Adaptive Cruise Control</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>82</VariableId>
+      <Variable>Adaptive Headlights</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>86</VariableId>
+      <Variable>Anti-lock Braking System (ABS)</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>87</VariableId>
+      <Variable>Auto Brake / Auto Emergency Braking</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>88</VariableId>
+      <Variable>Blind Spot Monitoring / Detection</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>99</VariableId>
+      <Variable>Electronic Stability Control (ESC)</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>100</VariableId>
+      <Variable>Traction Control</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>101</VariableId>
+      <Variable>Forward Collision Warning</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>102</VariableId>
+      <Variable>Lane Departure Warning</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>103</VariableId>
+      <Variable>Lane Keep System</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>104</VariableId>
+      <Variable>Rear Visibility Camera</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>105</VariableId>
+      <Variable>Park Assist</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>168</VariableId>
+      <Variable>TPMS</Variable>
+      <ValueId>1</ValueId>
+      <Value>Direct</Value>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>147</VariableId>
+      <Variable>Bus Length (feet)</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>148</VariableId>
+      <Variable>Bus Floor Configuration Type</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>149</VariableId>
+      <Variable>Bus Type</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>150</VariableId>
+      <Variable>Other Bus Info</Variable>
+      <ValueId />
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>151</VariableId>
+      <Variable>Custom Motorcycle Type</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>152</VariableId>
+      <Variable>Motorcycle Suspension Type</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>153</VariableId>
+      <Variable>Motorcycle Chassis Type</Variable>
+    </DecodedVariable>
+    <DecodedVariable>
+      <VariableId>154</VariableId>
+      <Variable>Other Motorcycle Info</Variable>
+      <ValueId />
+    </DecodedVariable>
+  </Results>
+</Response>

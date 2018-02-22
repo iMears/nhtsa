@@ -36,7 +36,7 @@ describe('NHTSAVehicle', () => {
       vin = 'WUAAU34248N006164';
       json = successfulJSON;
 
-      it('has a 200 status code', () => {
+      it('responds with a 200 status code', () => {
         expect(response.status).to.equal(200);
       });
 

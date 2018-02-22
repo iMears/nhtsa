@@ -1,0 +1,117 @@
+variableid,variable,valueid,value
+142,Suggested VIN,,
+143,Error Code,0,0 - VIN decoded clean. Check Digit (9th position) is correct
+144,Possible Values,,
+156,Additional Error Text,,
+10,Destination Market,,
+26,Make,582,AUDI
+27,Manufacturer Name,1150,QUATTRO GMBH
+28,Model,3789,R8
+29,Model Year,,2008
+31,Plant City,,Neckarsulm
+34,Series,,
+38,Trim,,
+39,Vehicle Type,2,PASSENGER CAR
+75,Plant Country,2,Germany
+76,Plant Company Name,,
+77,Plant State,,
+109,Trim2,,
+110,Series2,,
+114,Note,,
+136,Base Price ($),,
+157,Manufacturer Id,,1150
+158,Cash For Clunkers,,
+5,Body Class,1,Cabriolet/Convertible
+14,Doors,,2
+40,Windows,,
+60,Wheel Base Type,,
+159,Track Width,,
+25,Gross Vehicle Weight Rating,,
+49,Bed Length (inches),,
+54,Curb Weight (pounds),,
+111,Wheel Base (inches),,
+112,Wheel Base (inches) up to,,
+3,Bed Type,,
+4,Cab Type,,
+116,Trailer Type Connection,,
+117,Trailer Body Type,,
+118,Trailer Length (feet),,
+155,Other Trailer Info,,
+115,Number of Wheels,,
+119,Wheel Size Front (inches),,
+120,Wheel Size Rear (inches),,
+23,Entertainment System,,
+36,Steering Location,,
+33,Number of Seats,,
+61,Number of Seat Rows,,
+37,Transmission Style,,
+63,Transmission Speeds,,
+15,Drive Type,,
+41,Axles,,
+145,Axle Configuration,,
+42,Brake System Type,,
+52,Brake System Description,,
+1,Battery Info,,
+2,Battery Type,,
+48,Number of Battery Cells per Module,,
+57,Battery Current (Amps),,
+58,Battery Voltage (Volts),,
+59,Battery Energy (KWh),,
+72,EV Drive Unit,,
+132,Battery Current (Amps) up to,,
+133,Battery Voltage (Volts) up to,,
+134,Battery Energy (KWh) up to,,
+137,Number of Battery Modules per Pack,,
+138,Number of Battery Packs per Vehicle,,
+127,Charger Level,,
+128,Charger Power (KW),,
+9,Engine Number of Cylinders,,8
+11,Displacement (CC),,4163
+12,Displacement (CI),,254.041846666
+13,Displacement (L),,4.163000
+17,Engine Stroke Cycles,,
+18,Engine Model,,Audi
+21,Engine Power (KW),,313.194000
+24,Fuel Type - Primary,4,Gasoline
+62,Valve Train Design,,
+64,Engine Configuration,,
+66,Fuel Type - Secondary,,
+67,Fuel Delivery / Fuel Injection Type,,
+71,Engine Brake (hp),,420.00
+122,Cooling Type,,
+125,Engine Brake (hp) up to,,
+126,Electrification Level,,
+129,Other Engine Info,,"50-St/Can. BIN 5 / LEV II emission std. Emissions Certification Test Group: 8ADXV04.2375.  "
+135,Turbo,,
+139,Top Speed (MPH),,
+146,Engine Manufacturer,,
+78,Pretensioner,,
+79,Seat Belts Type,1,Manual
+121,Other Restraint System Info,,"Active Seat Belt, Advanced Front AirBag"
+55,Curtain Air Bag Locations,,
+56,Seat Cushion Air Bag Locations,,
+65,Front Air Bag Locations,3,1st Row (Driver & Passenger)
+69,Knee Air Bag Locations,3,1st Row (Driver & Passenger)
+107,Side Air Bag Locations,3,1st Row (Driver & Passenger)
+16,Driver Assist,,
+81,Adaptive Cruise Control,,
+82,Adaptive Headlights,,
+86,Anti-lock Braking System (ABS),,
+87,Auto Brake / Auto Emergency Braking,,
+88,Blind Spot Monitoring / Detection,,
+99,Electronic Stability Control (ESC),,
+100,Traction Control,,
+101,Forward Collision Warning,,
+102,Lane Departure Warning,,
+103,Lane Keep System,,
+104,Rear Visibility Camera,,
+105,Park Assist,,
+168,TPMS,1,Direct
+147,Bus Length (feet),,
+148,Bus Floor Configuration Type,,
+149,Bus Type,,
+150,Other Bus Info,,
+151,Custom Motorcycle Type,,
+152,Motorcycle Suspension Type,,
+153,Motorcycle Chassis Type,,
+154,Other Motorcycle Info,,
