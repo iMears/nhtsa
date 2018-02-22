@@ -1,6 +1,7 @@
 const axios = require('axios');
+const validateVIN = require('./validate-vin');
 
-class NhtsaVehicle {
+class NHTSAVehicle {
   static get URL_BASE() {
     return 'https://vpic.nhtsa.dot.gov/api/vehicles';
   }
@@ -11,7 +12,8 @@ class NhtsaVehicle {
 
   static decodeVIN(vin, format = this.DEFAULT_FORMAT) {
     return new Promise((resolve, reject) => {
-      if (!vin) reject('Invalid VIN');
+      if(!validateVIN(vin)) reject(new Error('Invalid VIN'));
+
       const url = `${this.URL_BASE}/DecodeVin/${vin}?format=${format}`;
       console.log(`making call to ${url}`);
 
@@ -23,4 +25,4 @@ class NhtsaVehicle {
   }
 }
 
-module.exports = NhtsaVehicle;
+module.exports = NHTSAVehicle;
