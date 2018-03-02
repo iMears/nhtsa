@@ -1,5 +1,6 @@
 const axios = require('axios');
 const validateVIN = require('./validate-vin');
+const validateFormat = require('./validate-format');
 
 class NHTSAVehicle {
   static get URL_BASE() {
@@ -10,17 +11,14 @@ class NHTSAVehicle {
     return 'json';
   }
 
-  static validateFormat(format) {
-    const allowedFormats = ['json', 'jsv', 'csv', 'xml'];
-
-    return allowedFormats.includes(format.toLowerCase());
+  static validate(vin, format) {
+    if(!validateFormat(format)) reject(new Eror('Invalid format'));
+    if(!validateVIN(vin)) reject(new Error('Invalid VIN'));
   }
 
   static decodeVIN(vin, format = this.DEFAULT_FORMAT, modelYear) {
-    console.log(vin);
     return new Promise((resolve, reject) => {
-      if(!this.validateFormat(format)) reject(new Eror('Invalid format'));
-      if(!validateVIN(vin)) reject(new Error('Invalid VIN'));
+      this.validate(vin, format);
 
       const queryString = `?format=${format}${modelYear ? `&modelYear=${modelYear}`: ''}`;
       const url = `${this.URL_BASE}/DecodeVin/${vin}${queryString}`;
@@ -34,8 +32,7 @@ class NHTSAVehicle {
 
   static decodeVINFlatFormat(vin, format = this.DEFAULT_FORMAT, modelYear) {
     return new Promise((resolve, reject) => {
-      if(!this.validateFormat(format)) reject(new Eror('Invalid format'));
-      if(!validateVIN(vin)) reject(new Error('Invalid VIN'));
+      this.validate(vin, format);
 
       const queryString = `?format=${format}${modelYear ? `&modelYear=${modelYear}`: ''}`;
       const url = `${this.URL_BASE}/DecodeVinValues/${vin}${queryString}`;
