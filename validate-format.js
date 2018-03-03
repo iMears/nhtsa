@@ -1,7 +1,10 @@
 function validateFormat(format) {
-  const allowedFormats = ['json', 'jsv', 'csv', 'xml'];
+  if (!format) return false;
+  if (typeof format !== 'string') return false;
 
-  return allowedFormats.includes(format.toLowerCase());
+  const allowedFormats = ['JSON', 'JSV', 'CSV', 'XML'];
+
+  return allowedFormats.includes(format.toUpperCase());
 }
 
 module.exports = validateFormat;

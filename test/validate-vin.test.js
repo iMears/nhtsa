@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const validateVIN = require('../validate-vin');
+const validateVin = require('../validate-vin');
 
 describe('#validVIN()', () => {
   let vin;
@@ -8,7 +8,7 @@ describe('#validVIN()', () => {
   context('given a 16 digit VIN', () => {
     it('fails validation', () => {
       vin = 'WVWUK63B92P54681';
-      result = validateVIN(vin);
+      result = validateVin(vin);
 
       expect(result).to.be.false;
     });
@@ -17,7 +17,7 @@ describe('#validVIN()', () => {
   context('given a 18 digit VIN', () => {
     it('fails validation', () => {
       vin = 'WVWUK63B92P5468188';
-      result = validateVIN(vin);
+      result = validateVin(vin);
 
       expect(result).to.be.false;
     });
@@ -26,7 +26,7 @@ describe('#validVIN()', () => {
   context('given a 17 digit VIN with an i', () => {
     it('fails validation', () => {
       vin = 'WVWUK63B92P54681i';
-      result = validateVIN(vin);
+      result = validateVin(vin);
 
       expect(result).to.be.false;
     });
@@ -35,7 +35,7 @@ describe('#validVIN()', () => {
   context('given a 17 digit VIN with an I', () => {
     it('fails validation', () => {
       vin = 'WVWUK63B92P54681I';
-      result = validateVIN(vin);
+      result = validateVin(vin);
 
       expect(result).to.be.false;
     });
@@ -44,7 +44,7 @@ describe('#validVIN()', () => {
   context('given a 17 digit VIN with an o', () => {
     it('fails validation', () => {
       vin = 'WVWUK63B92P54681o';
-      result = validateVIN(vin);
+      result = validateVin(vin);
 
       expect(result).to.be.false;
     });
@@ -53,7 +53,7 @@ describe('#validVIN()', () => {
   context('given a 17 digit VIN with an O', () => {
     it('fails validation', () => {
       vin = 'WVWUK63B92P54681O';
-      result = validateVIN(vin);
+      result = validateVin(vin);
 
       expect(result).to.be.false;
     });
@@ -62,7 +62,7 @@ describe('#validVIN()', () => {
   context('given a 17 digit VIN with a q', () => {
     it('fails validation', () => {
       vin = 'WVWUK63B92P54681q';
-      result = validateVIN(vin);
+      result = validateVin(vin);
 
       expect(result).to.be.false;
     });
@@ -71,7 +71,7 @@ describe('#validVIN()', () => {
   context('given a 17 digit VIN with a Q', () => {
     it('fails validation', () => {
         vin = 'WVWUK63B92P54681Q';
-        result = validateVIN(vin);
+        result = validateVin(vin);
 
       expect(result).to.be.false;
     });
@@ -80,7 +80,7 @@ describe('#validVIN()', () => {
   context('given a valid VIN with lowercase letters', () => {
     it('passes validation', () => {
       vin = 'wvwuk63b92p546818';
-      result = validateVIN(vin);
+      result = validateVin(vin);
 
       expect(result).to.be.true;
     });
@@ -89,7 +89,7 @@ describe('#validVIN()', () => {
   context('given a VIN with an incorrect check digit', () => {
     it('fails validation', () => {
       vin = 'WVWUK63B82P546818';
-      result = validateVIN(vin);
+      result = validateVin(vin);
 
       expect(result).to.be.false;
     });
@@ -98,7 +98,7 @@ describe('#validVIN()', () => {
   context('given a VIN with a correct check digit', () => {
     it('passes validation', () => {
       vin = '11111111111111111';
-      result = validateVIN(vin);
+      result = validateVin(vin);
 
       expect(result).to.be.true;
     });

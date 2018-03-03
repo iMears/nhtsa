@@ -1,5 +1,5 @@
 const axios = require('axios');
-const validateVIN = require('./validate-vin');
+const validateVin = require('./validate-vin');
 const validateFormat = require('./validate-format');
 
 class NHTSAVehicle {
@@ -13,7 +13,7 @@ class NHTSAVehicle {
 
   static validate(vin, format, reject) {
     if(!validateFormat(format)) reject(new Eror('Invalid format'));
-    if(!validateVIN(vin)) reject(new Error('Invalid VIN'));
+    if(!validateVin(vin)) reject(new Error('Invalid VIN'));
   }
 
   static makeRequest(url, resolve, reject) {
