@@ -1,38 +1,34 @@
-const NHTSAVehicle = require('./index');
+const NHTSA = require('nhtsa');
 const vin = 'WUAAU34248N006164';
 
-// Async await example of NHTSAVehicle#decodeVin()
+// Async/await example of #decodeVin()
 (async () => {
   try {
-    const response = await NHTSAVehicle.decodeVin(vin);
-    console.log(response.data);
+    const { data } = await NHTSA.decodeVin(vin);
+    console.log(data);
   } catch(error) {
     console.log(error);
   }
 })();
 
-// Promise example of NHTSAVehicle#decodeVin()
-(() => {
-  NHTSAVehicle.decodeVin(vin).then(
-    (response) => { console.log(response.data) },
-    (error) => { console.log(error) }
-  );
-})();
+// Promise example of #decodeVin()
+NHTSA.decodeVin(vin).then(
+  ({ data }) => console.log(data),
+  error => console.log(error)
+);
 
-// Async await example of NHTSAVehicle#()
+// Async/await example of #decodeVinFlatFormat()
 (async () => {
   try {
-    const response = await NHTSAVehicle.decodeVinFlatFormat(vin);
-    console.log(response.data);
+    const { data } = await NHTSA.decodeVinFlatFormat(vin);
+    console.log(data);
   } catch(error) {
     console.log(error);
   }
 })();
 
-// Promise example of NHTSAVehicle#decodeVinFlatFormat()
-(() => {
-  NHTSAVehicle.decodeVinFlatFormat(vin).then(
-    (response) => { console.log(response.data) },
-    (error) => { console.log(error) }
-  );
-})();
+// Promise example of #decodeVinFlatFormat()
+NHTSA.decodeVinFlatFormat(vin).then(
+  ({ data }) => console.log(data),
+  error => console.log(error)
+);

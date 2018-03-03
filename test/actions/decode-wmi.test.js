@@ -5,7 +5,7 @@ const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 const expect = chai.expect;
 const sinon = require('sinon');
-const NHTSAVehicle = require('../../index');
+const NHTSA = require('../../index');
 const decodeWmiSuccessJSON = require('../mocked-responses/decode-wmi/success');
 
 chai.use(chaiAsPromised);
@@ -30,7 +30,7 @@ describe('#decodeWmi()', () => {
   context('with valid VIN', () => {
     beforeEach(async () => {
       wmi = validWmi;
-      response = await NHTSAVehicle.decodeWmi(wmi);
+      response = await NHTSA.decodeWmi(wmi);
     });
 
     it('responds with a 200 status code', () => {
@@ -47,17 +47,6 @@ describe('#decodeWmi()', () => {
 
     it('has the correct search criteria', () => {
       expect(response.data['SearchCriteria']).to.equal('WMI:WUA');
-    });
-  });
-
-  context('with invalid WMI', () => {
-    beforeEach(() => {
-      wmi = 'FOO';
-      response = NHTSAVehicle.decodeWmi(wmi);
-    });
-
-    it('responds with an error', () => {
-      expect(response).to.be.rejectedWith('Invalidasdf WMI');
     });
   });
 });

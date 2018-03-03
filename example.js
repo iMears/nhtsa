@@ -1,12 +1,8 @@
-const NHTSAVehicle = require('./index');
+const NHTSA = require('nhtsa');
 const vin = 'WUAAU34248N006164';
 
-// Async await example of NHTSAVehicle#decodeVinExtended()
-(async () => {
-  try {
-    const response = await NHTSAVehicle.decodeVinExtended(vin);
-    console.log(response.data);
-  } catch(error) {
-    console.log(error);
-  }
-})();
+// Promise example of #decodeVin()
+NHTSA.decodeVin(vin).then(
+  ({ data }) => console.log(data),
+  error => console.log(error)
+);

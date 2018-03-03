@@ -2,13 +2,13 @@ const axios = require('axios');
 const validateVin = require('./validate-vin');
 const validateFormat = require('./validate-format');
 
-class NHTSAVehicle {
+class NHTSA {
   static get URL_BASE() {
     return 'https://vpic.nhtsa.dot.gov/api/vehicles';
   }
 
   static get DEFAULT_FORMAT() {
-    return 'json';
+    return 'JSON';
   }
 
   static validate(vin, format, reject) {
@@ -79,4 +79,4 @@ class NHTSAVehicle {
   }
 }
 
-module.exports = NHTSAVehicle;
+module.exports = NHTSA;

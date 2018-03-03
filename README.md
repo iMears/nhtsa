@@ -1,15 +1,22 @@
-# nhtsa-vehicle [![CircleCI](https://circleci.com/gh/iMears/nhtsa-vehicle.svg?style=svg)](https://circleci.com/gh/iMears/nhtsa-vehicle)
-A NPM package for fetching and parsing vehicle data from the [NHTSA API](https://vpic.nhtsa.dot.gov/api/Home)
+# nhsta [![CircleCI](https://circleci.com/gh/iMears/nhtsa.svg?style=svg)](https://circleci.com/gh/iMears/nhtsa)
+A NPM package for fetching and parsing vehicle data from the [NHTSA Vehicle API](https://vpic.nhtsa.dot.gov/api/Home)
 
 ## Basic usage
 ```javascript
-const NHTSAVehicle = require('nhtsa-vehicle');
+const NHTSA = require('nhtsa');
 
+// Example using async/await
 (async () => {
-  const response = await NHTSAVehicle.decodeVin('WUAAU34248N006164');
+  const { data } = await NHTSA.decodeVin('WUAAU34248N006164');
 
-  console.log(response.data);
+  console.log(data);
 })();
+
+// Example using a promise
+NHTSA.decodeVin('WUAAU34248N006164').then(
+  ({ data }) => console.log(data),
+  error => console.log(error)
+);
 ```
 
-[Try it out](https://npm.runkit.com/nhtsa-vehicle) in your browser!
+[Try it out](https://npm.runkit.com/nhtsa) in your browser!

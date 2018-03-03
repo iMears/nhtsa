@@ -40,6 +40,16 @@ describe('#validateFormat()', () => {
         expect(result).to.be.true;
       });
     });
+
+    context('given lower case format', () => {
+      it('passes validation', () => {
+        format = 'xml';
+        result = validateFormat(format);
+
+        expect(result).to.be.true;
+      });
+    });
+
   });
 
   context('invalid formats', () => {
