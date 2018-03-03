@@ -16,16 +16,6 @@ class NHTSAVehicle {
     if(!validateVIN(vin)) reject(new Error('Invalid VIN'));
   }
 
-  static generateQueryString(format, modelYear) {
-    return `?format=${format}${modelYear ? `&modelYear=${modelYear}`: ''}`
-  }
-
-  static generateUrl(endpoint, vin, format, modelYear) {
-    const queryString = this.generateQueryString(format, modelYear);
-
-    return `${this.URL_BASE}/${endpoint}/${vin}${queryString}`;
-  };
-
   static makeRequest(url, resolve, reject) {
     axios.get(url).then(
       response => resolve(response),
@@ -37,7 +27,8 @@ class NHTSAVehicle {
     return new Promise((resolve, reject) => {
       this.validate(vin, format, reject);
 
-      const url = this.generateUrl('DecodeVin', vin, format, modelYear);
+      const queryString = `?format=${format}${modelYear ? `&modelYear=${modelYear}`: ''}`;
+      const url = `${this.URL_BASE}/DecodeVin/${vin}${queryString}`;
 
       this.makeRequest(url, resolve, reject);
     });
@@ -47,7 +38,8 @@ class NHTSAVehicle {
     return new Promise((resolve, reject) => {
       this.validate(vin, format, reject);
 
-      const url = this.generateUrl('DecodeVinValues', vin, format, modelYear);
+      const queryString = `?format=${format}${modelYear ? `&modelYear=${modelYear}`: ''}`;
+      const url = `${this.URL_BASE}/DecodeVinValues/${vin}${queryString}`;
 
       return this.makeRequest(url, resolve, reject);
     });
@@ -57,7 +49,8 @@ class NHTSAVehicle {
     return new Promise((resolve, reject) => {
       this.validate(vin, format, reject);
 
-      const url = this.generateUrl('DecodeVinExtended', vin, format, modelYear);
+      const queryString = `?format=${format}${modelYear ? `&modelYear=${modelYear}`: ''}`;
+      const url = `${this.URL_BASE}/DecodeVinExtended/${vin}${queryString}`;
 
       return this.makeRequest(url, resolve, reject);
     });
@@ -67,7 +60,19 @@ class NHTSAVehicle {
     return new Promise((resolve, reject) => {
       this.validate(vin, format, reject);
 
-      const url = this.generateUrl('DecodeVinValuesExtended', vin, format, modelYear);
+      const queryString = `?format=${format}${modelYear ? `&modelYear=${modelYear}`: ''}`;
+      const url = `${this.URL_BASE}/DecodeVinValuesExtended/${vin}${queryString}`;
+
+      return this.makeRequest(url, resolve, reject);
+    });
+  }
+
+  static decodeWmi(vin, format = this.DEFAULT_FORMAT) {
+    return new Promise((resolve, reject) => {
+      if(!validateFormat(format)) reject(new Error('Invalid format'));
+
+      const queryString = `?format=${format}`;
+      const url = `${this.URL_BASE}/DecodeWMI${queryString}`;
 
       return this.makeRequest(url, resolve, reject);
     });

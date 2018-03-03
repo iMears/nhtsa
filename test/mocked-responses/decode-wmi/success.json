@@ -1,0 +1,18 @@
+{
+  "status": 200,
+  "data": {
+    "Count": 1,
+    "Message": "Results returned successfully",
+    "SearchCriteria": "WMI:WUA",
+    "Results": [
+      {
+        "CommonName": "quattro GmbH",
+        "Make": "Audi",
+        "ManufacturerName": "QUATTRO GMBH",
+        "ParentCompanyName": "AUDI",
+        "URL": "audi.com",
+        "VehicleType": "Passenger Car"
+      }
+    ]
+  }
+}
