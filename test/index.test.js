@@ -8,6 +8,7 @@ const sinon = require('sinon');
 const NHTSAVehicle = require('../index');
 const decodeVinSuccessJSON = require('./mocked-responses/decode-vin/success');
 const decodeVinFlatFormatSuccessJSON = require('./mocked-responses/decode-vin-flat-format/success');
+const decodeVinExtendedSuccessJSON = require('./mocked-responses/decode-vin-extended/success');
 
 chai.use(chaiAsPromised);
 
@@ -16,7 +17,10 @@ describe('NHTSAVehicle', () => {
   let response;
   let json;
   let data;
-  let vin = 'WUAAU34248N006164';
+  let vin;
+
+  const validVin = 'WUAAU34248N006164';
+  const invalidVin = 'invalidVIN';
 
   beforeEach(() => sandbox = sinon.sandbox.create());
 
@@ -27,11 +31,12 @@ describe('NHTSAVehicle', () => {
 
   afterEach(() => sandbox.restore());
 
-  describe('#decodeVIN()', () => {
-    json = decodeVinSuccessJSON;
+  describe('#decodeVinExtended()', () => {
+    json = decodeVinExtendedSuccessJSON;
 
     beforeEach(async () => {
-      response = await NHTSAVehicle.decodeVIN(vin);
+      vin = validVin;
+      response = await NHTSAVehicle.decodeVinExtended(vin);
     });
 
     context('with valid VIN', () => {
@@ -50,8 +55,8 @@ describe('NHTSAVehicle', () => {
 
     context('with invalid VIN', () => {
       beforeEach(() => {
-        vin = 'tacos';
-        response = NHTSAVehicle.decodeVIN(vin);
+        vin = invalidVin;
+        response = NHTSAVehicle.decodeVinExtended(vin);
       });
 
       it('responds with an error', () => {
@@ -60,13 +65,47 @@ describe('NHTSAVehicle', () => {
     });
   });
 
-  describe('#decodeVINFlatFormat()', () => {
+  describe('#decodeVin()', () => {
+    json = decodeVinSuccessJSON;
+
+    beforeEach(async () => {
+      vin = validVin;
+      response = await NHTSAVehicle.decodeVin(vin);
+    });
+
+    context('with valid VIN', () => {
+      it('responds with a 200 status code', () => {
+        expect(response.status).to.equal(200);
+      });
+
+      it('responds with JSON by default', () => {
+        expect(typeof response).to.equal('object');
+      });
+
+      it('has succssful message', () => {
+        expect(response.data['Message']).to.equal('Results returned successfully');
+      });
+    });
+
+    context('with invalid VIN', () => {
+      beforeEach(() => {
+        vin = invalidVin;
+        response = NHTSAVehicle.decodeVin(vin);
+      });
+
+      it('responds with an error', () => {
+        expect(response).to.be.rejectedWith('Invalid VIN');
+      });
+    });
+  });
+
+  describe('#decodeVinFlatFormat()', () => {
     json = decodeVinFlatFormatSuccessJSON;
 
     context('with valid VIN', () => {
       beforeEach(async () => {
-        vin = 'WUAAU34248N006164';
-        response = await NHTSAVehicle.decodeVINFlatFormat(vin);
+        vin = validVin;
+        response = await NHTSAVehicle.decodeVinFlatFormat(vin);
       });
 
       it('responds with a 200 status code', () => {
@@ -84,8 +123,8 @@ describe('NHTSAVehicle', () => {
 
     context('with invalid VIN', () => {
       beforeEach(() => {
-        vin = 'tacos';
-        response = NHTSAVehicle.decodeVINFlatFormat(vin);
+        vin = invalidVin;
+        response = NHTSAVehicle.decodeVinFlatFormat(vin);
       });
 
       it('responds with an error', () => {

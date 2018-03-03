@@ -6,7 +6,7 @@ A NPM package for fetching and parsing vehicle data from the [NHTSA API](https:/
 const NHTSAVehicle = require('nhtsa-vehicle');
 
 (async () => {
-  const response = await NHTSAVehicle.decodeVIN('WUAAU34248N006164');
+  const response = await NHTSAVehicle.decodeVin('WUAAU34248N006164');
 
   console.log(response.data);
 })();
