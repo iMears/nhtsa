@@ -62,6 +62,16 @@ class NHTSAVehicle {
       return this.makeRequest(url, resolve, reject);
     });
   }
+
+  static decodeVinExtendedFlatFormat(vin, format = this.DEFAULT_FORMAT, modelYear) {
+    return new Promise((resolve, reject) => {
+      this.validate(vin, format, reject);
+
+      const url = this.generateUrl('DecodeVinValuesExtended', vin, format, modelYear);
+
+      return this.makeRequest(url, resolve, reject);
+    });
+  }
 }
 
 module.exports = NHTSAVehicle;
