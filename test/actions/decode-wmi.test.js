@@ -5,7 +5,7 @@ const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 const expect = chai.expect;
 const sinon = require('sinon');
-const NHTSA = require('../../index');
+const NHTSA = require('../../nhtsa');
 const decodeWmiSuccessJSON = require('../mocked-responses/decode-wmi/success');
 
 chai.use(chaiAsPromised);
