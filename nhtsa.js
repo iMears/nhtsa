@@ -1,6 +1,6 @@
 const axios = require('axios');
-const validateVin = require('./validate-vin');
-const validateFormat = require('./validate-format');
+const validateVin = require('./helpers/validate-vin');
+const validateFormat = require('./helpers/validate-format');
 
 class NHTSA {
   static get URL_BASE() {

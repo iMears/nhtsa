@@ -1,7 +1,7 @@
 const expect = require('chai').expect;
-const validateVin = require('../validate-vin');
+const validateVin = require('../helpers/validate-vin');
 
-describe('#validVIN()', () => {
+describe('#validVin()', () => {
   let vin;
   let valid;
 

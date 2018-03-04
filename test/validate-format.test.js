@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const validateFormat = require('../validate-format');
+const validateFormat = require('../helpers/validate-format');
 
 describe('#validateFormat()', () => {
   let format;
