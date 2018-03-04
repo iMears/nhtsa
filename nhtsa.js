@@ -67,23 +67,34 @@ class NHTSA {
     });
   }
 
-  static decodeWmi(vin, format = this.DEFAULT_FORMAT) {
+  static decodeWmi(wmi, format = this.DEFAULT_FORMAT) {
     return new Promise((resolve, reject) => {
       if(!validateFormat(format)) reject(new Error('Invalid format'));
 
       const queryString = `?format=${format}`;
-      const url = `${this.URL_BASE}/DecodeWMI${queryString}`;
+      const url = `${this.URL_BASE}/DecodeWMI/${wmi}${queryString}`;
 
       return this.makeRequest(url, resolve, reject);
     });
   }
 
-  static decodeSaeWmi(vin, format = this.DEFAULT_FORMAT) {
+  static decodeSaeWmi(wmi, format = this.DEFAULT_FORMAT) {
     return new Promise((resolve, reject) => {
       if(!validateFormat(format)) reject(new Error('Invalid format'));
 
       const queryString = `?format=${format}`;
-      const url = `${this.URL_BASE}/DecodeSAEWMI/${queryString}`;
+      const url = `${this.URL_BASE}/DecodeSAEWMI/${wmi}${queryString}`;
+
+      return this.makeRequest(url, resolve, reject);
+    });
+  }
+
+  static getWmisForManufacturer(manufacturer, format = this.DEFAULT_FORMAT) {
+    return new Promise((resolve, reject) => {
+      if(!validateFormat(format)) reject(new Error('Invalid format'));
+
+      const queryString = `?format=${format}`;
+      const url = `${this.URL_BASE}/GetWMIsForManufacturer/${manufacturer}${queryString}`;
 
       return this.makeRequest(url, resolve, reject);
     });
