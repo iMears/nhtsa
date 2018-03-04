@@ -1,0 +1,108 @@
+{
+  "status": 200,
+  "data": {
+    "Count": 3,
+    "Message": "Response returned successfully",
+    "SearchCriteria": null,
+    "Results": [
+      {
+        "Address": "2200 Ferdinand Porsche Drive",
+        "Address2": null,
+        "City": "Herndon",
+        "ContactEmail": "thomas.zorn@vw.com",
+        "ContactFax": "248 754 5099",
+        "ContactPhone": "248-754-5548",
+        "Country": "United States (USA)",
+        "DBAs": "VOLKSWAGEN OF AMERICA, INC.",
+        "EquipmentItems": [],
+        "LastUpdated": "/Date(1454003423097-0500)/",
+        "ManufacturerTypes": [
+          {
+            "Name": "Completed Vehicle Manufacturer"
+          }
+        ],
+        "Mfr_CommonName": "Volkswagen",
+        "Mfr_ID": 1147,
+        "Mfr_Name": "VOLKSWAGEN GROUP OF AMERICA",
+        "OtherManufacturerDetails": null,
+        "PostalCode": "20171",
+        "PrimaryProduct": null,
+        "PrincipalFirstName": "Thomas Zorn",
+        "PrincipalLastName": null,
+        "PrincipalPosition": "Process Leader",
+        "StateProvince": "VA",
+        "SubmittedName": "Thomas Zorn",
+        "SubmittedOn": "/Date(1297659600000-0500)/",
+        "SubmittedPosition": "PROCESS LEADER",
+        "VehicleTypes": [
+          {
+            "GVWRFrom": "Class 1C: 4,001 - 5,000 lb (1,814 - 2,268 kg)",
+            "GVWRTo": "Class 1C: 4,001 - 5,000 lb (1,814 - 2,268 kg)",
+            "IsPrimary": false,
+            "Name": "Passenger Car"
+          },
+          {
+            "GVWRFrom": "Class 1C: 4,001 - 5,000 lb (1,814 - 2,268 kg)",
+            "GVWRTo": "Class 2E: 6,001 - 7,000 lb (2,722 - 3,175 kg)",
+            "IsPrimary": false,
+            "Name": "Multipurpose Passenger Vehicle (MPV)"
+          }
+        ]
+      },
+      {
+        "Address": null,
+        "Address2": null,
+        "City": "Wolfsburg",
+        "ContactEmail": null,
+        "ContactFax": null,
+        "ContactPhone": null,
+        "Country": "Germany",
+        "DBAs": null,
+        "EquipmentItems": [],
+        "LastUpdated": "/Date(1451511811977-0500)/",
+        "ManufacturerTypes": [],
+        "Mfr_CommonName": "Volkswagen",
+        "Mfr_ID": 1148,
+        "Mfr_Name": "VOLKSWAGEN AG",
+        "OtherManufacturerDetails": null,
+        "PostalCode": null,
+        "PrimaryProduct": null,
+        "PrincipalFirstName": null,
+        "PrincipalLastName": null,
+        "PrincipalPosition": null,
+        "StateProvince": null,
+        "SubmittedName": null,
+        "SubmittedOn": null,
+        "SubmittedPosition": null,
+        "VehicleTypes": []
+      },
+      {
+        "Address": "Autopista Mexico Puebla Km 116",
+        "Address2": "Col San Lorenzo Almecatla",
+        "City": "Cuautlancingo Ciudad Pueb",
+        "ContactEmail": null,
+        "ContactFax": null,
+        "ContactPhone": null,
+        "Country": "Mexico",
+        "DBAs": null,
+        "EquipmentItems": [],
+        "LastUpdated": "/Date(1509646105323-0400)/",
+        "ManufacturerTypes": [],
+        "Mfr_CommonName": "Volkswagen (Mexico)",
+        "Mfr_ID": 16478,
+        "Mfr_Name": "VOLKSWAGEN DE MEXICO SA DE CV",
+        "OtherManufacturerDetails": null,
+        "PostalCode": "CP 72700",
+        "PrimaryProduct": null,
+        "PrincipalFirstName": null,
+        "PrincipalLastName": null,
+        "PrincipalPosition": null,
+        "StateProvince": null,
+        "SubmittedName": null,
+        "SubmittedOn": null,
+        "SubmittedPosition": null,
+        "VehicleTypes": []
+      }
+    ]
+  }
+}
