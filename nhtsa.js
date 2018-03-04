@@ -114,6 +114,19 @@ class NHTSA {
     });
   }
 
+  // Get SAE WMIs for Manufacturer
+  // /vehicles/GetSAEWMIsForManufacturer/hon?format=json
+  static getSaeWmisForManufacturer(manufacturer, format = this.DEFAULT_FORMAT) {
+    return new Promise((resolve, reject) => {
+      if(!validateFormat(format)) reject(new Error('Invalid format'));
+
+      const queryString = `?format=${format}`;
+      const url = `${this.URL_BASE}/GetSAEWMIsForManufacturer/${manufacturer}${queryString}`;
+
+      return this.makeRequest(url, resolve, reject);
+    });
+  }
+
   // Get All Makes
   // /vehicles/GetAllMakes?format=json
   static getAllMakes(format = this.DEFAULT_FORMAT) {
@@ -155,13 +168,26 @@ class NHTSA {
   }
 
   // Get Manufacturer Details
-  // /vehicles/GetManufacturerDetails/honda?format=xml
+  // /vehicles/GetManufacturerDetails/volkswagen?format=json
   static getManufacturerDetails(manufacturer, format = this.DEFAULT_FORMAT) {
     return new Promise((resolve, reject) => {
       if(!validateFormat(format)) reject(new Error('Invalid format'));
 
       const queryString = `?format=${format}`;
       const url = `${this.URL_BASE}/GetManufacturerDetails/${manufacturer}${queryString}`;
+
+      return this.makeRequest(url, resolve, reject);
+    });
+  }
+
+  // Get Makes for Manufacturer by Manufacturer Name
+  // /vehicles/getmakeformanufacturer/volkswagen?format=json
+  static getMakesForManufacturer(manufacturer, format = this.DEFAULT_FORMAT) {
+    return new Promise((resolve, reject) => {
+      if(!validateFormat(format)) reject(new Error('Invalid format'));
+
+      const queryString = `?format=${format}`;
+      const url = `${this.URL_BASE}/getmakeformanufacturer/${manufacturer}${queryString}`;
 
       return this.makeRequest(url, resolve, reject);
     });

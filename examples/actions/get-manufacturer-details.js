@@ -1,4 +1,4 @@
-const NHTSA = require('../../nhtsa');
+const NHTSA = require('nhtsa');
 
 // Promise example of #getManufacturerDetails()
 NHTSA.getManufacturerDetails('volkswagen').then(
