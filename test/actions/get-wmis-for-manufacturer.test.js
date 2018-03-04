@@ -27,7 +27,7 @@ describe('#getWmisForManufacturer()', () => {
 
   afterEach(() => sandbox.restore());
 
-  context('with valid VIN', () => {
+  context('with valid WMI', () => {
     beforeEach(async () => {
       wmi = validWmi;
       response = await NHTSA.getWmisForManufacturer(wmi);

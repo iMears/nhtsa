@@ -6,25 +6,34 @@ const chaiAsPromised = require('chai-as-promised');
 const expect = chai.expect;
 const sinon = require('sinon');
 const NHTSA = require('../../nhtsa');
-const getAllMakesSuccessJSON = require('../mocked-responses/get-all-makes/success');
+const getPartsSuccessJSON = require('../mocked-responses/get-parts/success');
 
 chai.use(chaiAsPromised);
 
-describe('#getAllMakes()', () => {
+describe('#getParts()', () => {
   let sandbox;
   let response;
+  const type = 565;
+  let toDate = new Date();
+  let fromDate = new Date();
+
+  fromDate.setMonth(toDate.getMonth() - 1);
+
+  toDate = toDate.toLocaleDateString('en-US'); // '3/3/2018';
+  fromDate = fromDate.toLocaleDateString('en-US'); // '2/3/2018';
 
   beforeEach(() => {
     sandbox = sinon.sandbox.create();
-    const resolved = new Promise(resolve => resolve(getAllMakesSuccessJSON));
+    const resolved = new Promise(resolve => resolve(getPartsSuccessJSON));
     sandbox.stub(axios, 'get').returns(resolved);
   });
 
-  afterEach(() => sandbox.restore());
-
   beforeEach(async () => {
-    response = await NHTSA.getAllMakes();
+    const options = [type, toDate, fromDate];
+    response = await NHTSA.getParts(...options);
   });
+
+  afterEach(() => sandbox.restore());
 
   it('responds with a 200 status code', () => {
     expect(response.status).to.equal(200);
@@ -35,11 +44,11 @@ describe('#getAllMakes()', () => {
   });
 
   it('has succssful message', () => {
-    expect(response.data['Message']).to.equal('Response returned successfully');
+    expect(response.data['Message']).to.equal('Results returned successfully');
   });
 
   it('has the correct search criteria', () => {
-    expect(response.data['SearchCriteria']).to.equal(null);
+    expect(response.data['SearchCriteria']).to.equal('Type: 565 | From Date: 2/3/2018 | To Date: 3/3/2018');
   });
 
   it('has results', () => {
