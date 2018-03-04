@@ -48,5 +48,9 @@ describe('#decodeSaeWmi()', () => {
     it('has the correct search criteria', () => {
       expect(response.data['SearchCriteria']).to.equal('WMI:109017');
     });
+
+    it('has results', () => {
+      expect(response.data['Results'].length).to.not.equal(0);
+    });
   });
 });

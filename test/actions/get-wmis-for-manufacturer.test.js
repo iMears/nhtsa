@@ -48,5 +48,9 @@ describe('#getWmisForManufacturer()', () => {
     it('has the correct search criteria', () => {
       expect(response.data['SearchCriteria']).to.equal('Manufacturer: hon');
     });
+
+    it('has results', () => {
+      expect(response.data['Results'].length).to.not.equal(0);
+    });
   });
 });

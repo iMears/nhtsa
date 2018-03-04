@@ -48,6 +48,10 @@ describe('#decodeVin()', () => {
     it('has the correct search criteria', () => {
       expect(response.data['SearchCriteria']).to.equal('VIN:WUAAU34248N006164');
     });
+
+    it('has results', () => {
+      expect(response.data['Results'].length).to.not.equal(0);
+    });
   });
 
   context('with invalid VIN', () => {

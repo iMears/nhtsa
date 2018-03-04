@@ -6,22 +6,17 @@ const chaiAsPromised = require('chai-as-promised');
 const expect = chai.expect;
 const sinon = require('sinon');
 const NHTSA = require('../../nhtsa');
-const decodeWmiSuccessJSON = require('../mocked-responses/decode-wmi/success');
+const getAllMakesSuccessJSON = require('../mocked-responses/get-all-makes/success');
 
 chai.use(chaiAsPromised);
 
-describe('#decodeWmi()', () => {
+describe('#getAllMakes()', () => {
   let sandbox;
   let response;
-  let data;
-  let wmi;
-
-  const validVin = 'WUAAU34248N006164';
-  const validWmi = validVin.slice(0, 3);
 
   beforeEach(() => {
     sandbox = sinon.sandbox.create();
-    const resolved = new Promise(resolve => resolve(decodeWmiSuccessJSON));
+    const resolved = new Promise(resolve => resolve(getAllMakesSuccessJSON));
     sandbox.stub(axios, 'get').returns(resolved);
   });
 
@@ -29,8 +24,7 @@ describe('#decodeWmi()', () => {
 
   context('with valid VIN', () => {
     beforeEach(async () => {
-      wmi = validWmi;
-      response = await NHTSA.decodeWmi(wmi);
+      response = await NHTSA.getAllMakes();
     });
 
     it('responds with a 200 status code', () => {
@@ -42,11 +36,11 @@ describe('#decodeWmi()', () => {
     });
 
     it('has succssful message', () => {
-      expect(response.data['Message']).to.equal('Results returned successfully');
+      expect(response.data['Message']).to.equal('Response returned successfully');
     });
 
     it('has the correct search criteria', () => {
-      expect(response.data['SearchCriteria']).to.equal('WMI:WUA');
+      expect(response.data['SearchCriteria']).to.equal(null);
     });
 
     it('has results', () => {
