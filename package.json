@@ -1,6 +1,6 @@
 {
   "name": "nhtsa",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Fetch and parse vehicle data from the NHTSA Vehicle API",
   "main": "nhtsa.js",
   "scripts": {
