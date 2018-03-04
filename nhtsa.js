@@ -24,7 +24,7 @@ class NHTSA {
   }
 
   // Decode VIN
-  // /vehicles/DecodeVin/5UXWX7C5*BA?format=xml&modelyear=2011
+  // /vehicles/DecodeVin/5UXWX7C5*BA?format=json&modelyear=2011
   static decodeVin(vin, format = this.DEFAULT_FORMAT, modelYear) {
     return new Promise((resolve, reject) => {
       this.validate(vin, format, reject);
@@ -37,7 +37,7 @@ class NHTSA {
   }
 
   // Decode VIN (flat format)
-  // /vehicles/DecodeVinValues/5UXWX7C5*BA?format=xml&modelyear=2011
+  // /vehicles/DecodeVinValues/5UXWX7C5*BA?format=json&modelyear=2011
   static decodeVinFlatFormat(vin, format = this.DEFAULT_FORMAT, modelYear) {
     return new Promise((resolve, reject) => {
       this.validate(vin, format, reject);
@@ -50,7 +50,7 @@ class NHTSA {
   }
 
   // Decode VIN Extended
-  // /vehicles/DecodeVinExtended/5UXWX7C5*BA?format=jsv&modelyear=2011
+  // /vehicles/DecodeVinExtended/5UXWX7C5*BA?format=json&modelyear=2011
   static decodeVinExtended(vin, format = this.DEFAULT_FORMAT, modelYear) {
     return new Promise((resolve, reject) => {
       this.validate(vin, format, reject);
@@ -63,7 +63,7 @@ class NHTSA {
   }
 
   // Decode VIN Extended (flat format)
-  // /vehicles/DecodeVinValuesExtended/5UXWX7C5*BA?format=jsv&modelyear=2011
+  // /vehicles/DecodeVinValuesExtended/5UXWX7C5*BA?format=json&modelyear=2011
   static decodeVinExtendedFlatFormat(vin, format = this.DEFAULT_FORMAT, modelYear) {
     return new Promise((resolve, reject) => {
       this.validate(vin, format, reject);
@@ -76,7 +76,7 @@ class NHTSA {
   }
 
   // Decode WMI
-  // /vehicles/DecodeWMI/1FD?format=xml
+  // /vehicles/DecodeWMI/1FD?format=json
   static decodeWmi(wmi, format = this.DEFAULT_FORMAT) {
     return new Promise((resolve, reject) => {
       if(!validateFormat(format)) reject(new Error('Invalid format'));
@@ -89,7 +89,7 @@ class NHTSA {
   }
 
   // Decode SAE WMI
-  // /vehicles/DecodeSAEWMI/109017?format=xml
+  // /vehicles/DecodeSAEWMI/109017?format=json
   static decodeSaeWmi(wmi, format = this.DEFAULT_FORMAT) {
     return new Promise((resolve, reject) => {
       if(!validateFormat(format)) reject(new Error('Invalid format'));
@@ -102,7 +102,7 @@ class NHTSA {
   }
 
   // Get WMIs for Manufacturer
-  // /vehicles/GetWMIsForManufacturer/hon?format=xml
+  // /vehicles/GetWMIsForManufacturer/hon?format=json
   static getWmisForManufacturer(manufacturer, format = this.DEFAULT_FORMAT) {
     return new Promise((resolve, reject) => {
       if(!validateFormat(format)) reject(new Error('Invalid format'));
@@ -115,7 +115,7 @@ class NHTSA {
   }
 
   // Get All Makes
-  // /vehicles/GetAllMakes?format=csv
+  // /vehicles/GetAllMakes?format=json
   static getAllMakes(format = this.DEFAULT_FORMAT) {
     return new Promise((resolve, reject) => {
       if(!validateFormat(format)) reject(new Error('Invalid format'));
@@ -128,7 +128,7 @@ class NHTSA {
   }
 
   // Get Parts
-  // /vehicles/GetParts?type=565&fromDate=1/1/2015&toDate=5/5/2015&format=xml&page=1
+  // /vehicles/GetParts?type=565&fromDate=1/1/2015&toDate=5/5/2015&format=json&page=1
   static getParts(type, fromDate, toDate, page = 1, format = this.DEFAULT_FORMAT) {
     return new Promise((resolve, reject) => {
       if(!type || !['string', 'number'].includes(typeof type)) reject(new Error('Invalid type'));
@@ -136,6 +136,19 @@ class NHTSA {
 
       const queryString = `?type=${type}&fromDate=${fromDate}&toDate=${toDate}&format=${format}&page=${page}`;
       const url = `${this.URL_BASE}/GetParts${queryString}`;
+
+      return this.makeRequest(url, resolve, reject);
+    });
+  }
+
+  // Get All Manufacturers
+  // /vehicles/GetAllManufacturers?format=json&page=2
+  static getAllManufacturers(page = 1, format = this.DEFAULT_FORMAT) {
+    return new Promise((resolve, reject) => {
+      if(!validateFormat(format)) reject(new Error('Invalid format'));
+
+      const queryString = `?format=${format}&page=${page}`;
+      const url = `${this.URL_BASE}/GetAllManufacturers/${queryString}`;
 
       return this.makeRequest(url, resolve, reject);
     });
