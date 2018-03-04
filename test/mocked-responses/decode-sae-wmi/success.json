@@ -1,0 +1,38 @@
+{
+  "status": 200,
+  "data": {
+    "Count": 1,
+    "Message": "Results returned successfully",
+    "SearchCriteria": "WMI:109017",
+    "Results": [
+      {
+        "AddressLine1": "430 C St",
+        "AddressLine2": "",
+        "CancellationDate": null,
+        "City": "Patterson",
+        "Country": "United States",
+        "CreationDate": "2/6/1985 12:00:00 AM",
+        "Manufacturer": "Office Space Inc",
+        "ManufacturerEmail": "",
+        "ManufacturerFax": "",
+        "ManufacturerPhone": "",
+        "ModificationDate": "2/6/1985 12:00:00 AM",
+        "Over1kManufactured": "N",
+        "PostalCode": "95363-2724",
+        "PrimaryContactJobTitle": "",
+        "PrimaryContactName": "",
+        "Request1Description": "",
+        "Request2Description": "",
+        "RequestCode1": "",
+        "RequestCode2": "",
+        "SecondaryContactJobTitle": "",
+        "SecondaryContactName": "",
+        "State": "CA",
+        "VehicleMake": "Osi",
+        "VehicleType": "Commercial Coaches",
+        "WMICode": "109",
+        "WMICodeExtended": "017"
+      }
+    ]
+  }
+}

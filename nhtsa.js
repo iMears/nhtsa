@@ -77,6 +77,17 @@ class NHTSA {
       return this.makeRequest(url, resolve, reject);
     });
   }
+
+  static decodeSaeWmi(vin, format = this.DEFAULT_FORMAT) {
+    return new Promise((resolve, reject) => {
+      if(!validateFormat(format)) reject(new Error('Invalid format'));
+
+      const queryString = `?format=${format}`;
+      const url = `${this.URL_BASE}/DecodeSAEWMI/${queryString}`;
+
+      return this.makeRequest(url, resolve, reject);
+    });
+  }
 }
 
 module.exports = NHTSA;
