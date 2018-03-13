@@ -20,7 +20,11 @@
     "administration",
     "api",
     "vin",
-    "vehicle"
+    "vehicle",
+    "vehicles",
+    "vin decoder",
+    "vindec",
+    "automobiles"
   ],
   "author": "Maxwell Mears",
   "license": "MIT",
