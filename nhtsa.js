@@ -45,7 +45,7 @@ class NHTSA {
       const queryString = `?format=${format}${modelYear ? `&modelYear=${modelYear}`: ''}`;
       const url = `${this.URL_BASE}/DecodeVinValues/${vin}${queryString}`;
 
-      return this.makeRequest(url, resolve, reject);
+      this.makeRequest(url, resolve, reject);
     });
   }
 
@@ -58,7 +58,7 @@ class NHTSA {
       const queryString = `?format=${format}${modelYear ? `&modelYear=${modelYear}`: ''}`;
       const url = `${this.URL_BASE}/DecodeVinExtended/${vin}${queryString}`;
 
-      return this.makeRequest(url, resolve, reject);
+      this.makeRequest(url, resolve, reject);
     });
   }
 
@@ -71,7 +71,7 @@ class NHTSA {
       const queryString = `?format=${format}${modelYear ? `&modelYear=${modelYear}`: ''}`;
       const url = `${this.URL_BASE}/DecodeVinValuesExtended/${vin}${queryString}`;
 
-      return this.makeRequest(url, resolve, reject);
+      this.makeRequest(url, resolve, reject);
     });
   }
 
@@ -84,7 +84,7 @@ class NHTSA {
       const queryString = `?format=${format}`;
       const url = `${this.URL_BASE}/DecodeWMI/${wmi}${queryString}`;
 
-      return this.makeRequest(url, resolve, reject);
+      this.makeRequest(url, resolve, reject);
     });
   }
 
@@ -97,7 +97,7 @@ class NHTSA {
       const queryString = `?format=${format}`;
       const url = `${this.URL_BASE}/DecodeSAEWMI/${wmi}${queryString}`;
 
-      return this.makeRequest(url, resolve, reject);
+      this.makeRequest(url, resolve, reject);
     });
   }
 
@@ -110,7 +110,7 @@ class NHTSA {
       const queryString = `?format=${format}`;
       const url = `${this.URL_BASE}/GetWMIsForManufacturer/${manufacturer}${queryString}`;
 
-      return this.makeRequest(url, resolve, reject);
+      this.makeRequest(url, resolve, reject);
     });
   }
 
@@ -123,7 +123,7 @@ class NHTSA {
       const queryString = `?format=${format}`;
       const url = `${this.URL_BASE}/GetSAEWMIsForManufacturer/${manufacturer}${queryString}`;
 
-      return this.makeRequest(url, resolve, reject);
+      this.makeRequest(url, resolve, reject);
     });
   }
 
@@ -136,7 +136,7 @@ class NHTSA {
       const queryString = `?format=${format}`;
       const url = `${this.URL_BASE}/getAllMakes${queryString}`;
 
-      return this.makeRequest(url, resolve, reject);
+      this.makeRequest(url, resolve, reject);
     });
   }
 
@@ -150,7 +150,7 @@ class NHTSA {
       const queryString = `?type=${type}&fromDate=${fromDate}&toDate=${toDate}&format=${format}&page=${page}`;
       const url = `${this.URL_BASE}/GetParts${queryString}`;
 
-      return this.makeRequest(url, resolve, reject);
+      this.makeRequest(url, resolve, reject);
     });
   }
 
@@ -163,7 +163,7 @@ class NHTSA {
       const queryString = `?format=${format}&page=${page}`;
       const url = `${this.URL_BASE}/GetAllManufacturers/${queryString}`;
 
-      return this.makeRequest(url, resolve, reject);
+      this.makeRequest(url, resolve, reject);
     });
   }
 
@@ -176,7 +176,7 @@ class NHTSA {
       const queryString = `?format=${format}`;
       const url = `${this.URL_BASE}/GetManufacturerDetails/${manufacturer}${queryString}`;
 
-      return this.makeRequest(url, resolve, reject);
+      this.makeRequest(url, resolve, reject);
     });
   }
 
@@ -189,7 +189,7 @@ class NHTSA {
       const queryString = `?format=${format}`;
       const url = `${this.URL_BASE}/getmakeformanufacturer/${manufacturer}${queryString}`;
 
-      return this.makeRequest(url, resolve, reject);
+      this.makeRequest(url, resolve, reject);
     });
   }
 }
