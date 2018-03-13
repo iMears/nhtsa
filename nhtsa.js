@@ -161,7 +161,7 @@ class NHTSA {
       if(!validateFormat(format)) reject(new Error('Invalid format'));
 
       const queryString = `?format=${format}&page=${page}`;
-      const url = `${this.URL_BASE}/GetAllManufacturers/${queryString}`;
+      const url = `${this.URL_BASE}/GetAllManufacturers${queryString}`;
 
       this.makeRequest(url, resolve, reject);
     });
