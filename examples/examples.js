@@ -1,10 +1,10 @@
-const NHTSA = require('nhtsa');
+const nhtsa = require('nhtsa');
 const vin = 'WUAAU34248N006164';
 
 // Async/await example of #decodeVin()
 (async () => {
   try {
-    const { data } = await NHTSA.decodeVin(vin);
+    const { data } = await nhtsa.decodeVin(vin);
     console.log(data);
   } catch(error) {
     console.log(error);
@@ -12,7 +12,7 @@ const vin = 'WUAAU34248N006164';
 })();
 
 // Promise example of #decodeVin()
-NHTSA.decodeVin(vin).then(
+nhtsa.decodeVin(vin).then(
   ({ data }) => console.log(data),
   error => console.log(error)
 );
@@ -20,7 +20,7 @@ NHTSA.decodeVin(vin).then(
 // Async/await example of #decodeVinFlatFormat()
 (async () => {
   try {
-    const { data } = await NHTSA.decodeVinFlatFormat(vin);
+    const { data } = await nhtsa.decodeVinFlatFormat(vin);
     console.log(data);
   } catch(error) {
     console.log(error);
@@ -28,7 +28,7 @@ NHTSA.decodeVin(vin).then(
 })();
 
 // Promise example of #decodeVinFlatFormat()
-NHTSA.decodeVinFlatFormat(vin).then(
+nhtsa.decodeVinFlatFormat(vin).then(
   ({ data }) => console.log(data),
   error => console.log(error)
 );

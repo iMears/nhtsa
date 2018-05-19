@@ -5,7 +5,7 @@ const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 const expect = chai.expect;
 const sinon = require('sinon');
-const NHTSA = require('../../nhtsa');
+const nhtsa = require('../../nhtsa');
 const decodeWmiSuccessJSON = require('../mocked-responses/decode-wmi/success');
 
 chai.use(chaiAsPromised);
@@ -30,7 +30,7 @@ describe('#decodeWmi()', () => {
   context('with valid WMI', () => {
     beforeEach(async () => {
       wmi = validWmi;
-      response = await NHTSA.decodeWmi(wmi);
+      response = await nhtsa.decodeWmi(wmi);
     });
 
     it('responds with a 200 status code', () => {

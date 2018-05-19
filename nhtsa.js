@@ -192,6 +192,19 @@ class NHTSA {
       this.makeRequest(url, resolve, reject);
     });
   }
+
+  // Get Makes for Manufacturer by Manufacturer Name and Year
+  // /vehicles/GetMakesForManufacturerAndYear/mer?year=2013&format=json
+  static getMakesForManufacturerAndYear(manufacturer, year, format = this.DEFAULT_FORMAT) {
+    return new Promise((resolve, reject) => {
+      if(!validateFormat(format)) reject(new Error('Invalid format'));
+
+      const queryString = `year=${year}?format=${format}`;
+      const url = `${this.URL_BASE}/getmakeformanufacturer/${manufacturer}${queryString}`;
+
+      return this.makeRequest(url, resolve, reject);
+    });
+  }
 }
 
 module.exports = NHTSA;

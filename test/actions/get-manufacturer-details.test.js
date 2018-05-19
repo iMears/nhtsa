@@ -3,7 +3,7 @@ require('../support/setup');
 const axios = require('axios');
 const expect = require('chai').expect;
 const sinon = require('sinon');
-const NHTSA = require('../../nhtsa');
+const nhtsa = require('../../nhtsa');
 const getManufacturerDetailsSuccessJSON = require('../mocked-responses/get-manufacturer-details/success');
 
 describe('#getManufacturerDetails()', () => {
@@ -18,7 +18,7 @@ describe('#getManufacturerDetails()', () => {
   });
 
   beforeEach(async () => {
-    response = await NHTSA.getManufacturerDetails(manufacturer);
+    response = await nhtsa.getManufacturerDetails(manufacturer);
   });
 
   afterEach(() => sandbox.restore());

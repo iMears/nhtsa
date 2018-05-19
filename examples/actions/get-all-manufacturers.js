@@ -1,7 +1,7 @@
-const NHTSA = require('nhtsa');
+const nhtsa = require('nhtsa');
 
 // Promise example of #getAllManufaturers(format)
-NHTSA.getAllManufacturers(4, 'CSV').then(
+nhtsa.getAllManufacturers(4, 'CSV').then(
   ({ data }) => console.log(data),
   error => console.log(error)
 );

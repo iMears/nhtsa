@@ -5,7 +5,7 @@ const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 const expect = chai.expect;
 const sinon = require('sinon');
-const NHTSA = require('../../nhtsa');
+const nhtsa = require('../../nhtsa');
 const getAllMakesSuccessJSON = require('../mocked-responses/get-all-makes/success');
 
 chai.use(chaiAsPromised);
@@ -23,7 +23,7 @@ describe('#getAllMakes()', () => {
   afterEach(() => sandbox.restore());
 
   beforeEach(async () => {
-    response = await NHTSA.getAllMakes();
+    response = await nhtsa.getAllMakes();
   });
 
   it('responds with a 200 status code', () => {

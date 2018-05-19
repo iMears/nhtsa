@@ -5,7 +5,7 @@ const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 const expect = chai.expect;
 const sinon = require('sinon');
-const NHTSA = require('../../nhtsa');
+const nhtsa = require('../../nhtsa');
 const getWmisForManufacturerSuccessJSON = require('../mocked-responses/get-wmis-for-manufacturer/success');
 
 chai.use(chaiAsPromised);
@@ -30,7 +30,7 @@ describe('#getWmisForManufacturer()', () => {
   context('with valid WMI', () => {
     beforeEach(async () => {
       wmi = validWmi;
-      response = await NHTSA.getWmisForManufacturer(wmi);
+      response = await nhtsa.getWmisForManufacturer(wmi);
     });
 
     it('responds with a 200 status code', () => {

@@ -5,7 +5,7 @@ const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 const expect = chai.expect;
 const sinon = require('sinon');
-const NHTSA = require('../../nhtsa');
+const nhtsa = require('../../nhtsa');
 const decodeVinFlatFormatSuccessJSON = require('../mocked-responses/decode-vin-flat-format/success');
 
 chai.use(chaiAsPromised);
@@ -30,7 +30,7 @@ describe('#decodeVinFlatFormat()', () => {
   context('with valid VIN', () => {
     beforeEach(async () => {
       vin = validVin;
-      response = await NHTSA.decodeVinFlatFormat(vin);
+      response = await nhtsa.decodeVinFlatFormat(vin);
     });
 
     it('responds with a 200 status code', () => {
@@ -57,7 +57,7 @@ describe('#decodeVinFlatFormat()', () => {
   context('with invalid VIN', () => {
     beforeEach(() => {
       vin = invalidVin;
-      response = NHTSA.decodeVinFlatFormat(vin);
+      response = nhtsa.decodeVinFlatFormat(vin);
     });
 
     it('responds with an error', () => {

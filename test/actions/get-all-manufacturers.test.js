@@ -5,7 +5,7 @@ const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 const expect = chai.expect;
 const sinon = require('sinon');
-const NHTSA = require('../../nhtsa');
+const nhtsa = require('../../nhtsa');
 const getAllManufacturersSuccessJSON = require('../mocked-responses/get-parts/success');
 
 chai.use(chaiAsPromised);
@@ -21,7 +21,7 @@ describe('#getAllManufacturures()', () => {
   });
 
   beforeEach(async () => {
-    response = await NHTSA.getAllManufacturers();
+    response = await nhtsa.getAllManufacturers();
   });
 
   afterEach(() => sandbox.restore());

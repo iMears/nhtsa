@@ -1,4 +1,4 @@
-const NHTSA = require('nhtsa');
+const nhtsa = require('nhtsa');
 const type = 565;
 const page = 1;
 const format = 'CSV';
@@ -12,7 +12,7 @@ toDate = toDate.toLocaleDateString('en-US'); // '3/3/2018';
 fromDate = fromDate.toLocaleDateString('en-US'); // '2/3/2018';
 
 // Promise example of #getParts(type, fromDate, toDate, page, format)
-NHTSA.getParts(type, fromDate, toDate, page, format).then(
+nhtsa.getParts(type, fromDate, toDate, page, format).then(
   ({ data }) => console.log(data),
   error => console.log(error)
 );
