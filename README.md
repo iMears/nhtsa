@@ -3,17 +3,17 @@ A [NPM package](https://www.npmjs.com/package/nhtsa) for fetching and parsing ve
 
 ## Basic usage
 ```javascript
-const NHTSA = require('nhtsa');
+const nhtsa = require('nhtsa');
 
 // Example using async/await
 (async () => {
-  const { data } = await NHTSA.decodeVin('WUAAU34248N006164');
+  const { data } = await nhtsa.decodeVin('WUAAU34248N006164');
 
   console.log(data);
 })();
 
 // Example using a promise
-NHTSA.decodeVin('WUAAU34248N006164').then(
+nhtsa.decodeVin('WUAAU34248N006164').then(
   ({ data }) => console.log(data),
   error => console.log(error)
 );
@@ -29,7 +29,7 @@ The Decode VIN API will decode the VIN and the decoded output will be made avail
 </details>
 
 ```javascript
-const { data } = await NHTSA.decodeVin('WUAAU34248N006164');
+const { data } = await nhtsa.decodeVin('WUAAU34248N006164');
 ```
 
 ### Decode VIN (flat format)
@@ -40,29 +40,29 @@ The Decode VIN Flat Format API will decode the VIN and the decoded output will b
 </details>
 
 ```javascript
-const { data } = await NHTSA.decodeVinFlatFormat('WUAAU34248N006164');
+const { data } = await nhtsa.decodeVinFlatFormat('WUAAU34248N006164');
 ```
 
 ### Decode VIN Extended
 <details>
 <summary>More info</summary>
 <br>
-This is exactly like the Decode VIN method but provides additional information on variables related to other NHTSA programs like NCSA, Artemis etc.
+This is exactly like the Decode VIN method but provides additional information on variables related to other nhtsa programs like NCSA, Artemis etc.
 </details>
 
 ```javascript
-const { data } = await NHTSA.decodeVinExtended('WUAAU34248N006164');
+const { data } = await nhtsa.decodeVinExtended('WUAAU34248N006164');
 ```
 
 ### Decode VIN Extended (flat format)
 <details>
 <summary>More info</summary>
 <br>
-This is exactly like the Decode VIN (flat format) method but provides additional information on variables related to other NHTSA programs like NCSA, Artemis etc.
+This is exactly like the Decode VIN (flat format) method but provides additional information on variables related to other nhtsa programs like NCSA, Artemis etc.
 </details>
 
 ```javascript
-const { data } = await NHTSA.decodeVinExtendedFlatFormat('WUAAU34248N006164');
+const { data } = await nhtsa.decodeVinExtendedFlatFormat('WUAAU34248N006164');
 ```
 
 ### Decode WMI
@@ -73,7 +73,7 @@ This provides information on the World Manufacturer Identifier for a specific WM
 </details>
 
 ```javascript
-const { data } = await NHTSA.decodeWmi('1FD');
+const { data } = await nhtsa.decodeWmi('1FD');
 ```
 
 ### Decode SAE WMI
@@ -84,7 +84,7 @@ This provides information on the World Manufacturer Identifier for a specific WM
 </details>
 
 ```javascript
-const { data } = await NHTSA.decodeSaeWmi('1FD');
+const { data } = await nhtsa.decodeSaeWmi('1FD');
 ```
 
 ### Get WMIs for Manufacturer
@@ -95,7 +95,7 @@ Provides information on the all World Manufacturer Identifier (WMI) for a specif
 </details>
 
 ```javascript
-const { data } = await NHTSA.getWmisForManufacturer('hon');
+const { data } = await nhtsa.getWmisForManufacturer('hon');
 ```
 
 ### Get SAE WMIs for Manufacturer
@@ -106,7 +106,7 @@ Provides information on the all World Manufacturer Identifier (WMI) for a specif
 </details>
 
 ```javascript
-const { data } = await NHTSA.getSaeWmisForManufacturer('hon');
+const { data } = await nhtsa.getSaeWmisForManufacturer('hon');
 ```
 
 ### Get All Makes
@@ -117,7 +117,7 @@ This provides a list of all the Makes available in vPIC Dataset.
 </details>
 
 ```javascript
-const { data } = await NHTSA.getAllMakes();
+const { data } = await nhtsa.getAllMakes();
 ```
 
 ### Get Parts
@@ -133,7 +133,7 @@ const fromDate = '3/2/2018';
 const toDate = '3/10/2018';
 const page = 2;
 
-const { data } = await NHTSA.getParts(type, fromDate, toDate, page);
+const { data } = await nhtsa.getParts(type, fromDate, toDate, page);
 ```
 
 ### Get All Manufacturers
@@ -144,7 +144,7 @@ This provides a list of all the Manufacturers available in vPIC Dataset. Results
 </details>
 
 ```javascript
-const { data } = await NHTSA.getAllManufacturers();
+const { data } = await nhtsa.getAllManufacturers();
 ```
 
 ### Get Manufacturer Details
@@ -155,7 +155,7 @@ This provides the details for a specific manufacturer that is requested. This gi
 </details>
 
 ```javascript
-const { data } = await NHTSA.getManufacturerDetails('volkswagen');
+const { data } = await nhtsa.getManufacturerDetails('volkswagen');
 ```
 
 ### Get Makes for Manufacturer by Manufacturer Name
@@ -166,7 +166,7 @@ This returns all the Makes in the vPIC dataset for a specified manufacturer whos
 </details>
 
 ```javascript
-const { data } = await NHTSA.getMakesForManufacturer('volkswagen');
+const { data } = await nhtsa.getMakesForManufacturer('volkswagen');
 ```
 
 [Try it out](https://npm.runkit.com/nhtsa) in your browser!
