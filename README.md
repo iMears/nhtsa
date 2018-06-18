@@ -1,4 +1,4 @@
-# nhtsa [![CircleCI](https://circleci.com/gh/iMears/nhtsa.svg?style=svg)](https://circleci.com/gh/iMears/nhtsa)[![npm](https://img.shields.io/npm/dt/express.svg)](https://github.com/iMears/nhtsa)
+# nhtsa [![CircleCI](https://circleci.com/gh/iMears/nhtsa.svg?style=svg)](https://circleci.com/gh/iMears/nhtsa)
 A [NPM package](https://www.npmjs.com/package/nhtsa) for fetching and parsing vehicle data from the [NHTSA Vehicle API](https://vpic.nhtsa.dot.gov/api/Home)
 
 ## Basic usage
