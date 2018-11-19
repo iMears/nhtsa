@@ -205,6 +205,171 @@ class NHTSA {
       return this.makeRequest(url, resolve, reject);
     });
   }
+
+  // Get Makes for Vehicle Type by Vehicle Type Name
+  // /vehicles/GetMakesForVehicleType/car?format=json
+  static getMakesForVehicleType(type, format = this.DEFAULT_FORMAT) {
+    return new Promise((resolve, reject) => {
+      if(!validateFormat(format)) reject(new Error('Invalid format'));
+
+      const queryString = `?format=${format}`;
+      const url = `${this.URL_BASE}/getmakesforvehicletype/${type}${queryString}`;
+
+      return this.makeRequest(url, resolve, reject);
+    });
+  }
+
+  // Get Vehicle Types for Make by Name
+  // /vehicles/GetVehicleTypesForMake/mercedes?format=json
+  static getVehicleTypesForMake(make, format = this.DEFAULT_FORMAT) {
+    return new Promise((resolve, reject) => {
+      if(!validateFormat(format)) reject(new Error('Invalid format'));
+
+      const queryString = `?format=${format}`;
+      const url = `${this.URL_BASE}/getvehicletypesformake/${make}${queryString}`;
+
+      return this.makeRequest(url, resolve, reject);
+    });
+  }
+
+  // Get Vehicle Types for Make by Id
+  // /vehicles/GetVehicleTypesForMakeId/450?format=json
+  static getVehicleTypesForMakeId(makeId, format = this.DEFAULT_FORMAT) {
+    return new Promise((resolve, reject) => {
+      if(!validateFormat(format)) reject(new Error('Invalid format'));
+
+      const queryString = `?format=${format}`;
+      const url = `${this.URL_BASE}/getvehicletypesformakeid/${makeid}${queryString}`;
+
+      return this.makeRequest(url, resolve, reject);
+    });
+  }
+
+  // Get Equipment Plant Codes
+  // /vehicles/GetEquipmentPlantCodes/2015?format=json
+  static getEquipmentPlantCodes(year, format = this.DEFAULT_FORMAT) {
+    return new Promise((resolve, reject) => {
+      if(!validateFormat(format)) reject(new Error('Invalid format'));
+
+      const queryString = `?format=${format}`;
+      const url = `${this.URL_BASE}/getequipmentplantcodes/${year}${queryString}`;
+
+      return this.makeRequest(url, resolve, reject);
+    });
+  }
+
+  // Get Models for Make
+  // /vehicles/GetModelsForMake/honda?format=json
+  static getModelsForMake(make, format = this.DEFAULT_FORMAT) {
+    return new Promise((resolve, reject) => {
+      if(!validateFormat(format)) reject(new Error('Invalid format'));
+
+      const queryString = `?format=${format}`;
+      const url = `${this.URL_BASE}/getmodelsformake/${make}${queryString}`;
+
+      return this.makeRequest(url, resolve, reject);
+    });
+  }
+
+  // Get Models for MakeId
+  // /vehicles/GetModelsForMakeId/440?format=json
+  static getModelsForMakeId(makeId, format = this.DEFAULT_FORMAT) {
+    return new Promise((resolve, reject) => {
+      if(!validateFormat(format)) reject(new Error('Invalid format'));
+
+      const queryString = `?format=${format}`;
+      const url = `${this.URL_BASE}/getmodelsformakeid/${makeId}${queryString}`;
+
+      return this.makeRequest(url, resolve, reject);
+    });
+  }
+
+  // Get Models for Make and a combination of Year and Vehicle Type
+  // /vehicles/GetModelsForMakeYear/make/honda/modelyear/2015?format=csv
+  // /vehicles/GetModelsForMakeYear/make/honda/vehicletype/truck?format=csv
+  // /vehicles/GetModelsForMakeYear/make/honda/modelyear/2015/vehicletype/truck?format=csv
+  static getModelsForMakeYear(make, year, type, format = this.DEFAULT_FORMAT) {
+    return new Promise((resolve, reject) => {
+      if(!validateFormat(format)) reject(new Error('Invalid format'));
+
+      let path = `/${make}`
+      if (year) {
+        path += `/modelyear/${year}`
+      }
+
+      if (type) {
+        path += `/vehicletype/${type}`
+      }
+
+      const queryString = `?format=${format}`;
+      const url = `${this.URL_BASE}/getmodelsformakeyear/${path}${queryString}`;
+
+      return this.makeRequest(url, resolve, reject);
+    });
+  }
+
+  // Get Models for Make Id and a combination of Year and Vehicle Type
+  // /vehicles/GetModelsForMakeIdYear/makeId/474/modelyear/2015?format=csv
+  // /vehicles/GetModelsForMakeIdYear/makeId/474/vehicletype/truck?format=csv
+  // /vehicles/GetModelsForMakeIdYear/makeId/474/modelyear/2015/vehicletype/truck?format=csv
+  static getModelsForMakeIdYear(makeId, year, type, format = this.DEFAULT_FORMAT) {
+    return new Promise((resolve, reject) => {
+      if(!validateFormat(format)) reject(new Error('Invalid format'));
+
+      let path = `/${makeId}`
+      if (year) {
+        path += `/modelyear/${year}`
+      }
+
+      if (type) {
+        path += `/vehicletype/${type}`
+      }
+
+      const queryString = `?format=${format}`;
+      const url = `${this.URL_BASE}/getmodelsformakeidyear/${path}${queryString}`;
+
+      return this.makeRequest(url, resolve, reject);
+    });
+  }
+
+  // Get Vehicle Variables List
+  // /vehicles/GetVehicleVariableList?format=xml
+  static getVehicleVariableList(format = this.DEFAULT_FORMAT) {
+    return new Promise((resolve, reject) => {
+      if(!validateFormat(format)) reject(new Error('Invalid format'));
+
+      const queryString = `?format=${format}`;
+      const url = `${this.URL_BASE}/getvehiclevariablelist${queryString}`;
+
+      return this.makeRequest(url, resolve, reject);
+    });
+  }
+
+  // Get Vehicle Variable Values List
+  // /vehicles/GetVehicleVariableValuesList/battery type?format=jsv
+  static getVehicleVariableValuesList(variable, format = this.DEFAULT_FORMAT) {
+    return new Promise((resolve, reject) => {
+      if(!validateFormat(format)) reject(new Error('Invalid format'));
+
+      const queryString = `?format=${format}`;
+      const url = `${this.URL_BASE}/getvehiclevariablevalueslist/${variable}${queryString}`;
+
+      return this.makeRequest(url, resolve, reject);
+    });
+  }
+
+  // Get Canadian vehicle specifications
+  // /vehicles/GetCanadianVehicleSpecifications/?year=2011&make=Acura&format=csv
+  static getCanadianVehicleSpecifications(year, make, format = this.DEFAULT_FORMAT) {
+    return new Promise((resolve, reject) => {
+      if(!validateFormat(format)) reject(new Error('Invalid format'));
+
+      const queryString = `?year=${year}&make=${make}&format=${format}`;
+      const url = `${this.URL_BASE}/getcanadianvehiclespecifications/${queryString}`;
+
+      return this.makeRequest(url, resolve, reject);
+    });
+  }
 }
 
 module.exports = NHTSA;
