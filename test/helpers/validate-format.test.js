@@ -1,8 +1,9 @@
-const expect = require('chai').expect;
-const validateFormat = require('../../helpers/validate-format');
+import { expect } from 'chai';
+import validateFormat from '../../src/helpers/validate-format';
 
 describe('#validateFormat()', () => {
   let format;
+  let result;
 
   context('valid formats', () => {
     context('given JSON format', () => {
@@ -49,7 +50,6 @@ describe('#validateFormat()', () => {
         expect(result).to.be.true;
       });
     });
-
   });
 
   context('invalid formats', () => {
@@ -73,7 +73,7 @@ describe('#validateFormat()', () => {
 
     context('given a number', () => {
       it('fails validation', () => {
-        format = 007;
+        format = 0o7;
         result = validateFormat(format);
 
         expect(result).to.be.false;

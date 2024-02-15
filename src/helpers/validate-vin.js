@@ -1,4 +1,4 @@
-function validateVIN(vin) {
+const validateVIN = vin => {
   vin = vin.toLowerCase();
 
   if (!/^[a-hj-npr-z0-9]{8}[0-9xX][a-hj-npr-z0-9]{8}$/.test(vin)) {
@@ -22,6 +22,6 @@ function validateVIN(vin) {
   const mod = sum % 11;
 
   return mod === 10 ? vin.charAt(8) === 'x' : vin.charAt(8) == mod;
-}
+};
 
-module.exports = validateVIN;
+export default validateVIN;

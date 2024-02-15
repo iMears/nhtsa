@@ -1,27 +1,26 @@
-require('../support/setup');
-
-const axios = require('axios');
-const chai = require('chai');
-const chaiAsPromised = require('chai-as-promised');
-const expect = chai.expect;
-const sinon = require('sinon');
-const nhtsa = require('../../nhtsa');
-const getWmisForManufacturerSuccessJSON = require('../mocked-responses/get-wmis-for-manufacturer/success');
+import '../support/setup';
+import axios from 'axios';
+import chai from 'chai';
+import chaiAsPromised from 'chai-as-promised';
+import sinon from 'sinon';
+import nhtsa from '../../src/nhtsa';
+import getWmisForManufacturerSuccessJSON from '../mocked-responses/get-wmis-for-manufacturer/success';
 
 chai.use(chaiAsPromised);
+
+const { expect } = chai;
 
 describe('#getWmisForManufacturer()', () => {
   let sandbox;
   let response;
-  let data;
   let wmi;
 
   const validVin = 'WUAAU34248N006164';
   const validWmi = validVin.slice(0, 3);
 
   beforeEach(() => {
-    sandbox = sinon.sandbox.create();
-    const resolved = new Promise(resolve => resolve(getWmisForManufacturerSuccessJSON));
+    sandbox = sinon.createSandbox();
+    const resolved = Promise.resolve(getWmisForManufacturerSuccessJSON);
     sandbox.stub(axios, 'get').returns(resolved);
   });
 
@@ -41,7 +40,7 @@ describe('#getWmisForManufacturer()', () => {
       expect(typeof response).to.equal('object');
     });
 
-    it('has succssful message', () => {
+    it('has successful message', () => {
       expect(response.data['Message']).to.equal('Response returned successfully');
     });
 

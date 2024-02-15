@@ -1,14 +1,14 @@
-require('../support/setup');
-
-const axios = require('axios');
-const chai = require('chai');
-const chaiAsPromised = require('chai-as-promised');
-const expect = chai.expect;
-const sinon = require('sinon');
-const nhtsa = require('../../nhtsa');
-const getPartsSuccessJSON = require('../mocked-responses/get-parts/success');
+import '../support/setup';
+import axios from 'axios';
+import chai from 'chai';
+import chaiAsPromised from 'chai-as-promised';
+import sinon from 'sinon';
+import nhtsa from '../../src/nhtsa';
+import getPartsSuccessJSON from '../mocked-responses/get-parts/success';
 
 chai.use(chaiAsPromised);
+
+const { expect } = chai;
 
 describe('#getParts()', () => {
   let sandbox;
@@ -23,8 +23,8 @@ describe('#getParts()', () => {
   fromDate = fromDate.toLocaleDateString('en-US'); // '2/3/2018';
 
   beforeEach(() => {
-    sandbox = sinon.sandbox.create();
-    const resolved = new Promise(resolve => resolve(getPartsSuccessJSON));
+    sandbox = sinon.createSandbox();
+    const resolved = Promise.resolve(getPartsSuccessJSON);
     sandbox.stub(axios, 'get').returns(resolved);
   });
 
@@ -43,7 +43,7 @@ describe('#getParts()', () => {
     expect(typeof response).to.equal('object');
   });
 
-  it('has succssful message', () => {
+  it('has successful message', () => {
     expect(response.data['Message']).to.equal('Results returned successfully');
   });
 

@@ -1,19 +1,18 @@
-require('../support/setup');
-
-const axios = require('axios');
-const expect = require('chai').expect;
-const sinon = require('sinon');
-const nhtsa = require('../../nhtsa');
-const getManufacturerDetailsSuccessJSON = require('../mocked-responses/get-manufacturer-details/success');
+import '../support/setup';
+import axios from 'axios';
+import { expect } from 'chai';
+import sinon from 'sinon';
+import nhtsa from '../../src/nhtsa';
+import getManufacturerDetailsSuccessJSON from '../mocked-responses/get-manufacturer-details/success';
 
 describe('#getManufacturerDetails()', () => {
   let sandbox;
   let response;
-  const manufacturer = 'honda'
+  const manufacturer = 'honda';
 
   beforeEach(() => {
-    sandbox = sinon.sandbox.create();
-    const resolved = new Promise(resolve => resolve(getManufacturerDetailsSuccessJSON));
+    sandbox = sinon.createSandbox();
+    const resolved = Promise.resolve(getManufacturerDetailsSuccessJSON);
     sandbox.stub(axios, 'get').returns(resolved);
   });
 
@@ -31,7 +30,7 @@ describe('#getManufacturerDetails()', () => {
     expect(typeof response).to.equal('object');
   });
 
-  it('has succssful message', () => {
+  it('has successful message', () => {
     expect(response.data['Message']).to.equal('Response returned successfully');
   });
 

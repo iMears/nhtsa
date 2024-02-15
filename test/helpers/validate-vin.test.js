@@ -1,9 +1,9 @@
-const expect = require('chai').expect;
-const validateVin = require('../../helpers/validate-vin');
+import { expect } from 'chai';
+import validateVin from '../../src/helpers/validate-vin';
 
-describe('#validVin()', () => {
+describe('#validateVin()', () => {
   let vin;
-  let valid;
+  let result;
 
   context('given a 16 digit VIN', () => {
     it('fails validation', () => {
@@ -70,8 +70,8 @@ describe('#validVin()', () => {
 
   context('given a 17 digit VIN with a Q', () => {
     it('fails validation', () => {
-        vin = 'WVWUK63B92P54681Q';
-        result = validateVin(vin);
+      vin = 'WVWUK63B92P54681Q';
+      result = validateVin(vin);
 
       expect(result).to.be.false;
     });

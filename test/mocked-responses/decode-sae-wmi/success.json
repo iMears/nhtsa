@@ -3,7 +3,7 @@
   "data": {
     "Count": 1,
     "Message": "Results returned successfully",
-    "SearchCriteria": "WMI:109017",
+    "SearchCriteria": "WMI:WUA",
     "Results": [
       {
         "AddressLine1": "430 C St",
